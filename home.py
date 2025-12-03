@@ -54,7 +54,7 @@ def home_page():
 
     # TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
     st.write("""
-    - 🧑‍💻 I am a <Current Role and/or Studies> 
+    - 🧑‍💻 I am a <Current Role and/or Studies> that you are doing
 
     - 🛩️ prev: <Previous Experience, Background or Studies>
 
