@@ -109,9 +109,10 @@ st.header("Avg Duration of Movies by Year")
 
 # TODO: Ex 2.7: Make a line chart of the average duration of movies (not TV shows) in minutes for every year across all the years. 
 
-movies_only = movies_df[movies_df["type"] == "movie" ]
+movies_only = movies_df[movies_df["type"] == "Movie"]
 
-movies_only["duration_min"] = movies_only["duration"].apply(lambda x: int(x.replace("min ", ""))
+movies_only["duration_min"] = (
+    movies_only["duration"].apply(lambda x: int(x.replace(" min", "")))
 )
 
 movies_avg_duration_per_year =(
