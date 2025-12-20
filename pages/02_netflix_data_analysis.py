@@ -46,7 +46,7 @@ max_year = movies_df["release_year"].max()
 num_missing_directors = movies_df["director"].isna().sum()
 
 # TODO: Ex 2.4: How many different countries are there in the data?
-n_countries = None
+n_countries = len(unique_contries)
 
 # TODO: Ex 2.5: How many characters long are on average the title names?
 avg_title_length = None
