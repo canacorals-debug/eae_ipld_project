@@ -24,7 +24,11 @@ st.divider()
 def load_data():
     data_path = "data/cities_temperatures.csv"
 
-    temps_df = None  # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
+    temps_df = pd.read_csv(data_path)
+
+    temps_df.head(5)
+    
+    temps_df # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
 
     if temps_df is not None:
         temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
@@ -43,26 +47,34 @@ with st.expander("Check the complete dataset:"):
 
 # TODO: Ex 3.2: Create a new column called `AvgTemperatureCelsius` that contains the temperature in Celsius degrees.
 # temps_df["AvgTemperatureCelsius"] = ...       # uncomment this line to complete it
+temps_df["AvgTemperatureCelsius"] = (temps_df["AvgTemperatureFahrenheit"])
 
 
 # ----- Extracting some basic information from the dataset -----
 
 # TODO: Ex 3.3: How many different cities are there? Provide a list of them.
-unique_countries_list = None
+unique_countries_list = temps_df['City'].unique().tolist()  # TODO: this should be a list of unique countries
+
+num_cities = temps_df["City"].nunique()
 
 # TODO: Ex 3.4: Which are the minimum and maximum dates?
-min_date = None
-max_date = None
+min_date = temps_df['Date'].min()  
+max_date = temps_df['Date'].max() 
 
 # TODO:  Ex 3.5: What are the global minimum and maximum temperatures? Find the city and the date of each of them.
-min_temp = None
-max_temp = None
 
-min_temp_city = None
-min_temp_date = None
+min_temp = temps_df['AvgTemperatureCelsius'].min() # TODO
+max_temp = temps_df['AvgTemperatureCelsius'].max()  # TODO
+min_temp_row = temps_df.loc[temps_df['AvgTemperatureCelsius'] == min_temp]
+max_temp_row = temps_df.loc[temps_df['AvgTemperatureCelsius'] == max_temp]
 
-max_temp_city = None
-max_temp_date = None
+
+min_temp_city = min_temp_row['City'].iloc[0]  # TODO
+min_temp_date = min_temp_row['Date'].iloc[0]  # TODO
+
+max_temp_city = max_temp_row['City'].iloc[0]   # TODO
+max_temp_date = max_temp_row['Date'].iloc[0]   # TODO
+
 
 
 # ----- Displaying the extracted information metrics -----
