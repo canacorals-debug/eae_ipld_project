@@ -26,7 +26,8 @@ def load_data():
 
     temps_df = pd.read_csv(data_path)
 
-    return temps_df.head(5)
+    st.dataframe(temps_df.head(5))
+
     
     temps_df # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
 
