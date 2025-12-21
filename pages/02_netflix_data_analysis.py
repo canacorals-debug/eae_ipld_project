@@ -111,15 +111,15 @@ st.header("Avg Duration of Movies by Year")
 
 movies_only = movies_df[movies_df["type"] == "Movie"]
 
-movies_only["duration_min"] = (
+movies_only.loc[:, "duration_min"] = (
     movies_only["duration"].apply(lambda x: int(x.replace(" min", "")))
 )
 
-movies_avg_duration_per_year =(
-movies_only
-.groupby("release_year")["duration_min"]
-.mean()
-) 
+movies_avg_duration_per_year = (
+    movies_only
+    .groupby("release_year")["duration_min"]
+    .mean()
+)
 
 if movies_avg_duration_per_year is not None:
     fig = plt.figure(figsize=(9, 6))
