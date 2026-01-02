@@ -138,16 +138,16 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     for city in selected_cities:
         city_df = temps_df[temps_df["City"] == city]
 
-    city_df_period = city_df[
-        (city_df["Date"] >= start_date) &
-        (city_df["Date"] <= end_date)
-    ]
+        city_df_period = city_df[
+            (city_df["Date"] >= start_date) &
+            (city_df["Date"] <= end_date)
+        ]
 
-    plt.plot(
-        city_df_period["Date"],
-        city_df_period["AvgTemperatureCelsius"],
-        label=city
-    )
+        plt.plot(
+            city_df_period["Date"],
+            city_df_period["AvgTemperatureCelsius"],
+            label=city
+        )
 
     plt.title("Average Temperature for Selected Cities")
     plt.xlabel("Date")
@@ -161,22 +161,20 @@ if unique_countries_list is not None and len(selected_cities) > 0:
 
     fig = plt.figure(figsize=(10, 5))
 
-    fig = plt.figure(figsize=(10, 5))
-
     for city in selected_cities:
         city_df = temps_df[temps_df["City"] == city]
 
-    city_df_period = city_df[
-        (city_df["Date"] >= start_date) &
-        (city_df["Date"] <= end_date)
-    ]
+        city_df_period = city_df[
+            (city_df["Date"] >= start_date) &
+            (city_df["Date"] <= end_date)
+        ]
 
-    plt.hist(
-        city_df_period["AvgTemperatureCelsius"],
-        bins=20,
-        alpha=0.5,
-        label=city
-    )
+        plt.hist(
+            city_df_period["AvgTemperatureCelsius"],
+            bins=20,
+            alpha=0.5,
+            label=city
+        )
 
     plt.title("Temperature Distribution for Selected Cities")
     plt.xlabel("Average Temperature (°C)")
