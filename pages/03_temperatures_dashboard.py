@@ -137,34 +137,28 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     # every city has to be its own line with a different color.
 
     # for city in selected_cities:
-    for city in selected_cities:
-    #     city_df = None
-        city_df = temps_df[temps_df["City"] == city] 
-    #     city_df_period =
-    city_df_period = city_df[
-        (city_df["Date"] >= start_date) &
-    (city_df["Date"] <= end_date)
-    ]
+    for city in selected_cities: 
+    #city_df = None 
+        city_df = temps_df[temps_df["City"] == city]
+    #city_df_period = None 
+        city_df_period = city_df[
+            (city_df["Date"] >= start_date) &
+            (city_df["Date"] <= end_date)
+         ]
 
-    fig = plt.figure(figsize=(10, 5))
-
+#     plt.plot() 
     plt.plot(
-    city_df_period["Date"],
-    city_df_period["AvgTemperatureCelsius"],
-    label="Munich Temperature"
-    )
+        city_df_period["Date"],
+        city_df_period["AvgTemperatureCelsius"],
+        label=city
+        )               # TODO plot each city line and use the label parameter to set the legend name for each city
 
-plt.plot(
-    city_df_period["Date"],
-    city_df_period["AvgTemperatureCelsius"],
-    label="Munich Temperature"
-)
-
-plt.title("Average Temperature in Munich (2008-2010)")
-plt.xlabel("Date")
-plt.ylabel("Average Temperature Celsius")
-plt.legend()
-
+# plt.title() 
+plt.title("Average Temperature for Selected Cities (2008-2010)")  # TODO
+# plt.xlabel()
+plt.xlabel("Date")  # TODO
+# plt.ylabel()
+plt.ylabel("Average Temperature in Celsius")  # TODO
 
 plt.legend()
 
@@ -179,22 +173,32 @@ c.pyplot(fig)
 
 fig = plt.figure(figsize=(10, 5))
 
-# plt.hist()
+# for city in selected_cities:
+for city in selected_cities: 
+    #city_df = None 
+    city_df = temps_df[temps_df["City"] == city]
+    #city_df_period = None 
+    city_df_period = city_df[
+        (city_df["Date"] >= start_date) &
+        (city_df["Date"] <= end_date)
+        
+    ]
+#     plt.hist()     
+    plt.hist(
+        city_df_period["AvgTemperatureCelsius"],
+        bins=20,
+        alpha=0.5,
+        label=city
+    )               # TODO: plot each city histogram in the same plot and use the label parameter to set the legend name for each city 
 
-plt.hist(
-    city_df_period["AvgTemperatureCelsius"],
-    bins=20,
-    label="Temperature"
-)
-    # TODO: use the city_df_period AvgTemperatureCelsius column as the data to plot, you can use the parameter bins=20
-# plt.title() 
-plt.title("Temperature Distribution in munich (2008-2010)")  # TODO
+# plt.title()
+plt.title("Temperature Distribution for Selected Cities (2008-2010)")   # TODO
 # plt.xlabel()
 plt.xlabel("Average Temperature Celsius")  # TODO
-# plt.ylabel() 
-plt.ylabel("Frequency") 
+# plt.ylabel()
+plt.ylabel("Frequency")  # TODO
 
-plt.legend 
+plt.legend()
 
 plt.show()
 
