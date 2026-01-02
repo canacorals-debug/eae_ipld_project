@@ -133,6 +133,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
 
     c = st.container(border=True)
 
+    # ===== LINE PLOT =====
     fig = plt.figure(figsize=(10, 5))
 
     for city in selected_cities:
@@ -153,12 +154,12 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     plt.xlabel("Date")
     plt.ylabel("Average Temperature (°C)")
     plt.legend()
+    c.pyplot(fig) 
 
-    c.pyplot(fig)
-
-    # TODO: Make a histogram of the temperature reads of a list of selected cities, for the selected time period, 
+        # TODO: Make a histogram of the temperature reads of a list of selected cities, for the selected time period, 
     # every city has to be its own distribution with a different color.
 
+    # ===== HISTOGRAM =====
     fig = plt.figure(figsize=(10, 5))
 
     for city in selected_cities:
@@ -180,14 +181,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     plt.xlabel("Average Temperature (°C)")
     plt.ylabel("Frequency")
     plt.legend()
-
-    c.pyplot(fig)
-
-
-
-
-
-
+    c.pyplot(fig)  # render the figure in Streamlit
 
 
 
