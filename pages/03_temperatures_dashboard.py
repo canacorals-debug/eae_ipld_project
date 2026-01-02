@@ -167,6 +167,8 @@ plt.legend()
 
 
 plt.legend()
+
+plt.show()
     
 c.pyplot(fig)
 
@@ -186,9 +188,9 @@ fig = plt.figure(figsize=(10, 5))
     # plt.xlabel()  # TODO
     # plt.ylabel()  # TODO
 
-    plt.legend()
+plt.legend()
 
-    c.pyplot(fig)
+ c.pyplot(fig)
 
 
 
