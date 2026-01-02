@@ -14,7 +14,7 @@ with st.sidebar:
 
 
 # ----- Title of the page -----
-st.title("🌦️ Temperatures Dashboard TESTING ")
+st.title("🌦️ Temperatures Dashboard TESTING q  ")
 st.divider()
 
 
