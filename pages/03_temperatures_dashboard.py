@@ -24,8 +24,16 @@ st.divider()
 def load_data():
     data_path = "data/cities_temperatures.csv"
 
-    # Display only the first 5 rows
-    st.dataframe(temps_df.head(5)) # only first 5 rows shown
+    temps_df = pd.read_csv(data_path, index_col="show_id")
+    st.dataframe(temps_df.head(5))  # only first 5 rows shown
+
+    if temps_df is not None:
+        temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
+
+    return temps_df
+
+    
+    # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
 
 
 # Displaying the dataset in a expandable table
