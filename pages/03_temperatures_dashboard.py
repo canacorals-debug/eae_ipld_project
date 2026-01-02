@@ -23,18 +23,16 @@ st.divider()
 @st.cache_data
 def load_data():
     data_path = "data/cities_temperatures.csv"
+   
+    # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
 
     temps_df = pd.read_csv(data_path, index_col="show_id")
-
-    st.dataframe(temps_df.head(5))
-
-    
-    # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
+    st.dataframe(temps_df.head(5))  # only first 5 rows shown
 
     if temps_df is not None:
         temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
 
-    return temps_df  # a Pandas DataFrame
+    return temps_df
 
 # Displaying the dataset in a expandable table
 with st.expander("Check the complete dataset:"):
