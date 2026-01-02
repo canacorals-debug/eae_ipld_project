@@ -23,19 +23,21 @@ st.divider()
 def load_data():
     data_path = "data/cities_temperatures.csv"
 
-    # Load CSV and set 'show_id' as index
+    # Load dataset and set 'show_id' as index
     temps_df = pd.read_csv(data_path, index_col="show_id")
 
-    # Display first 5 rows
-    st.dataframe(temps_df.head(5))
-
     # Convert Date column to datetime.date
-    if temps_df is not None:
-        temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
+    temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
 
     return temps_df
 
-# Displaying the dataset in a expandable table
+# Load the dataset
+temps_df = load_data()
+
+# Show only first 5 rows
+st.dataframe(temps_df.head(5))
+
+# Full dataset inside an expander
 with st.expander("Check the complete dataset:"):
     st.dataframe(temps_df)
 
