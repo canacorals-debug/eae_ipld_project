@@ -24,9 +24,6 @@ st.divider()
 def load_data():
     data_path = "data/cities_temperatures.csv"
 
-    # Load dataset and set 'show_id' as index
-    temps_df = pd.read_csv(data_path, index_col="show_id")
-
     # Display only the first 5 rows
     st.dataframe(temps_df.head(5)) # only first 5 rows shown
 
