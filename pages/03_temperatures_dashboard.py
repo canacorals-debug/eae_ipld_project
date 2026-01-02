@@ -130,28 +130,25 @@ if unique_countries_list is not None and len(selected_cities) > 0:
 
     c = st.container(border=True)
 
-    # ===== LINE PLOT =====
+    # LINE PLOT
     fig = plt.figure(figsize=(10, 5))
 
     for city in selected_cities:
         city_df = temps_df[temps_df["City"] == city]
-
         city_df_period = city_df[
-            (city_df["Date"] >= start_date) &
+            (city_df["Date"] >= start_date) & 
             (city_df["Date"] <= end_date)
         ]
+        if len(city_df_period) == 0:
+            continue
+    plt.plot(city_df_period["Date"], city_df_period["AvgTemperatureCelsius"], label=city)
 
-        plt.plot(
-            city_df_period["Date"],
-            city_df_period["AvgTemperatureCelsius"],
-            label=city
-        )
-
-    plt.title("Average Temperature for Selected Cities")
+    plt.title(f"Average Temperature for Selected Cities ({start_date} to {end_date})")
     plt.xlabel("Date")
     plt.ylabel("Average Temperature (°C)")
     plt.legend()
-    c.pyplot(fig) 
+    c.pyplot(fig)
+
 
         # TODO: Make a histogram of the temperature reads of a list of selected cities, for the selected time period, 
     # every city has to be its own distribution with a different color.
@@ -166,6 +163,9 @@ if unique_countries_list is not None and len(selected_cities) > 0:
             (city_df["Date"] >= start_date) &
             (city_df["Date"] <= end_date)
         ]
+
+        if len(city_df_period) == 0:
+            continue #Skip if no data of this city is in the data set. 
 
         plt.hist(
             city_df_period["AvgTemperatureCelsius"],
