@@ -76,7 +76,8 @@ min_temp_date = min_temp_row['Date'].iloc[0]  # TODO
 max_temp_city = max_temp_row['City'].iloc[0]   # TODO
 max_temp_date = max_temp_row['Date'].iloc[0]   # TODO
 
-
+print(f"The Min temperature is: {min_temp} the city is {min_temp_city} and date {min_temp_date}")
+print(f"The Max temperature is: {max_temp} the city is {max_temp_city} and date {max_temp_date}")
 
 # ----- Displaying the extracted information metrics -----
 
