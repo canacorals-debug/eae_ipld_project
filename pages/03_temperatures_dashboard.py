@@ -20,14 +20,6 @@ st.divider()
 
 # ----- Loading the dataset -----
 
-@st.cache_data
-def load_data():
-    data_path = "data/cities_temperatures.csv"
-
-    if temps_df is not None:
-        temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
-
-    return temps_df
 
     
     # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
