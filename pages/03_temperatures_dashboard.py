@@ -30,9 +30,7 @@ def load_data():
     # Display only the first 5 rows
     st.dataframe(temps_df.head(5)) # only first 5 rows shown
 
-    if temps_df is not None:
-        temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
-        
+
 # Displaying the dataset in a expandable table
 with st.expander("Check the complete dataset:"):
     st.dataframe(temps_df)
