@@ -32,9 +32,7 @@ def load_data():
 
     if temps_df is not None:
         temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
-
-    return temps_df
-
+        
 # Displaying the dataset in a expandable table
 with st.expander("Check the complete dataset:"):
     st.dataframe(temps_df)
