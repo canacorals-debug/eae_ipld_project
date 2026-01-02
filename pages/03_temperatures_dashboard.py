@@ -184,12 +184,12 @@ for city in selected_cities:
         
     ]
 #     plt.hist()     
-    plt.hist(
-        city_df_period["AvgTemperatureCelsius"],
-        bins=20,
-        alpha=0.5,
-        label=city
-    )               # TODO: plot each city histogram in the same plot and use the label parameter to set the legend name for each city 
+plt.hist(
+    city_df_period["AvgTemperatureCelsius"],
+    bins=20,
+    alpha=0.5,
+    label=city
+)               # TODO: plot each city histogram in the same plot and use the label parameter to set the legend name for each city 
 
 # plt.title()
 plt.title("Temperature Distribution for Selected Cities (2008-2010)")   # TODO
