@@ -179,18 +179,26 @@ c.pyplot(fig)
 
 fig = plt.figure(figsize=(10, 5))
 
-    # for city in selected_cities:
-    #     city_df = None            # TODO
-    #     city_df_period = None     # TODO
-    #     plt.hist()                # TODO
+# plt.hist()
 
-    # plt.title()   # TODO
-    # plt.xlabel()  # TODO
-    # plt.ylabel()  # TODO
+plt.hist(
+    city_df_period["AvgTemperatureCelsius"],
+    bins=20,
+    label="Temperature"
+)
+    # TODO: use the city_df_period AvgTemperatureCelsius column as the data to plot, you can use the parameter bins=20
+# plt.title() 
+plt.title("Temperature Distribution in munich (2008-2010)")  # TODO
+# plt.xlabel()
+plt.xlabel("Average Temperature Celsius")  # TODO
+# plt.ylabel() 
+plt.ylabel("Frequency") 
 
-plt.legend()
+plt.legend 
 
- c.pyplot(fig)
+plt.show()
+
+c.pyplot(fig)
 
 
 
