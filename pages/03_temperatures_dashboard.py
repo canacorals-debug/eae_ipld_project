@@ -141,12 +141,12 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     # for city in selected_cities:
 
     for city in selected_cities: 
-        #city_df = None 
+    #city_df = None 
         city_df = temps_df[temps_df["City"] == city]
         #city_df_period = None 
         city_df_period = city_df[
             (city_df["Date"] >= start_date) &
-            (city_df["Date"] <= end_date)
+            (city_df["Date"] <= end_date)  
         ]
 
     #     plt.plot() 
