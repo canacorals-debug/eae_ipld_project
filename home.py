@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-    
+
 # ----- Page configs (tab title, favicon) -----
 st.set_page_config(
     page_title="<Your Name> Portfolio",
