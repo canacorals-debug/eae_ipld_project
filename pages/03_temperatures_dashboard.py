@@ -29,7 +29,7 @@ def load_data():
     st.dataframe(temps_df.head(5))
 
     
-    temps_df # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
+   # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
 
     if temps_df is not None:
         temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
