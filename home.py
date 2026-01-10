@@ -34,7 +34,7 @@ def home_page():
     # ----- Your Profile Image -----
     st.html(f"""
     <div style="display: flex; justify-content: center;">
-        <img src="{img}" alt="Julio Jesus Ramirez" width="300" height="300" style="border-radius: 50%; object-fit: cover; margin-top: 40px; margin-bottom: 40px;">
+        <img src="{img}" alt="Julio Jesus Ramirez" width="500" height="500" style="border-radius: 50%; object-fit: cover; margin-top: 40px; margin-bottom: 40px;">
     </div>
     """)
 
