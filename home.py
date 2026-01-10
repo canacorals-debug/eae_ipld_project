@@ -57,17 +57,17 @@ def home_page():
 
     - 🛩️ prev: I did a Associate in Science in Digital Marketing and a BBA in Marketing Analytics. 
 
-    - ❤️ < My passion is hospitality. However, I am very data driven business wise and I love the combination
+    - ❤️  My passion is hospitality. However, I am very data driven business wise and I love the combination
              of operations and business withtin the data cyle.
 
-    - 🤖 < My personal projects are Cana Corals Solutions which is a data driven company that will focus on 
+    - 🤖  My personal projects are Cana Corals Solutions which is a data driven company that will focus on 
              creating a SaaS long term for different businesses. Inclouding doctors, hospitality check ins, 
              events and financial. 
 
-    - 🏂 <Your Hobbies are editing my own footage for all the marketing and padel. 
+    - 🏂 My Hobbies are editing my own footage for all the marketing and padel. 
              
 
-    - 📫 How to reach me: Jjesusr@student.eae.es
+    - 📫 How to reach me: jjesusr@student.eae.es
 
     - 🏠 I love Barcelona 
     """)
