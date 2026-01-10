@@ -74,7 +74,6 @@ def home_page():
 
     # Feel free to add other points like your Linkedin, Github, Social Media, etc.
 
-    https://www.linkedin.com/in/julio-jesus-ramirez-920741137/ 
     # This is ensambling the entire app with the different pages and the navigation menu
 pg = st.navigation([
     st.Page(home_page, title="Home", icon="👋"),
