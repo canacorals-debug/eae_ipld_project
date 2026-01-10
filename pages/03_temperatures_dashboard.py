@@ -152,11 +152,11 @@ if unique_countries_list is not None and len(selected_cities) > 0:
             (city_df["Date"] <= end_date)
         ]
 
-    plt.plot(
-        city_df_period["Date"],
-        city_df_period["AvgTemperatureCelsius"],
-        label=city
-    )
+        plt.plot(
+            city_df_period["Date"],
+            city_df_period["AvgTemperatureCelsius"],
+            label=city
+        )
 
     plt.title("Average Temperature Over Time for Selected Cities")
     plt.xlabel("Date")
