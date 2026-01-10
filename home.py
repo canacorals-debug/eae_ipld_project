@@ -40,7 +40,7 @@ def home_page():
 
 
     # ----- Personal title or short description -----
-    current_role = "Student at EAE Business school doing a Master in Bid Data & Analytics   # TODO: Change this"
+    current_role = "Student at EAE Business school doing a Master in Bid Data & Analytics"
 
     st.html(f"""<div style="text-align: center;"><h4><i>{current_role}</i></h4></div>""")
 
@@ -67,7 +67,7 @@ def home_page():
     - 🏂 <Your Hobbies are editing my own footage for all the marketing and padel. 
              
 
-    - 📫 How to reach me: Jjesusr@
+    - 📫 How to reach me: Jjesusr@student.eae.es
 
     - 🏠 I love Barcelona 
     """)
