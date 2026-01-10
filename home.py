@@ -4,7 +4,7 @@ import base64
 
 # ----- Page configs (tab title, favicon) -----
 st.set_page_config(
-    page_title="<Your Name> Portfolio",
+    page_title="<Julio Jesus Ramirez> Portfolio",
     page_icon="📊",
 )
 
@@ -34,13 +34,13 @@ def home_page():
     # ----- Your Profile Image -----
     st.html(f"""
     <div style="display: flex; justify-content: center;">
-        <img src="{img}" alt="Your Name" width="300" height="300" style="border-radius: 50%; object-fit: cover; margin-top: 40px; margin-bottom: 40px;">
+        <img src="{img}" alt="Julio Jesus Ramirez" width="300" height="300" style="border-radius: 50%; object-fit: cover; margin-top: 40px; margin-bottom: 40px;">
     </div>
     """)
 
 
     # ----- Personal title or short description -----
-    current_role = "Current Role and/or Studies or Description"   # TODO: Change this
+    current_role = "Student at EAE Business school doing a Master in Bid Data & Analytics   # TODO: Change this"
 
     st.html(f"""<div style="text-align: center;"><h4><i>{current_role}</i></h4></div>""")
 
@@ -52,25 +52,30 @@ def home_page():
 
     # TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
     st.write("""
-    - 🧑‍💻 I am a ML Eng that you are doing
+    - 🧑‍💻 I am a entrepenur with most of my experience in hospitality. I do house music events
+             and I host guests in our very own Airbnb's in Punta Cana, Dominican Republic. 
 
-    - 🛩️ prev: <Previous Experience, Background or Studies>
+    - 🛩️ prev: I did a Associate in Science in Digital Marketing and a BBA in Marketing Analytics. 
 
-    - ❤️ <Your Passion and/or Interests>
+    - ❤️ < My passion is hospitality. However, I am very data driven business wise and I love the combination
+             of operations and business withtin the data cyle.
 
-    - 🤖 <Your Personal Projects>
+    - 🤖 < My personal projects are Cana Corals Solutions which is a data driven company that will focus on 
+             creating a SaaS long term for different businesses. Inclouding doctors, hospitality check ins, 
+             events and financial. 
 
-    - 🏂 <Your Hobbies>
+    - 🏂 <Your Hobbies are editing my own footage for all the marketing and padel. 
+             
 
-    - 📫 How to reach me: <Your Email>
+    - 📫 How to reach me: Jjesusr@
 
-    - 🏠 Barcelona
+    - 🏠 I love Barcelona 
     """)
 
     # Feel free to add other points like your Linkedin, Github, Social Media, etc.
 
-
-# This is ensambling the entire app with the different pages and the navigation menu
+    https://www.linkedin.com/in/julio-jesus-ramirez-920741137/ 
+    # This is ensambling the entire app with the different pages and the navigation menu
 pg = st.navigation([
     st.Page(home_page, title="Home", icon="👋"),
     st.Page("pages/01_image_cropper.py", title="Image Cropper", icon="🖼️"),
