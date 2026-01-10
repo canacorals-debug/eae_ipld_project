@@ -16,7 +16,7 @@ def home_page():
         st.header("Introduction to Programming Languages for Data")
         st.write("###")
         st.write("***Final Project - Dec 2025***")
-        st.write("**Author:** <your name> ")
+        st.write("**Author:** <Julio Jesus Ramirez> ")
         st.write("**Instructor:** [Enric Domingo](https://github.com/enricd)")
 
 
