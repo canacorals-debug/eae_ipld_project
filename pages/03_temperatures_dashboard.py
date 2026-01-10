@@ -183,13 +183,13 @@ if unique_countries_list is not None and len(selected_cities) > 0:
             (city_df["Date"] >= start_date) &
             (city_df["Date"] <= end_date)
         ]
-    #     plt.hist()     
-    plt.hist(
-        city_df_period["AvgTemperatureCelsius"],
-        bins=20,
-        alpha=0.5,
-        label=city
-    )
+        #     plt.hist()     
+        plt.hist(
+            city_df_period["AvgTemperatureCelsius"],
+            bins=20,
+            alpha=0.5,
+            label=city
+        )
 
     # plt.title()
     plt.title("Temperature Distribution for Selected Cities")   # TODO
